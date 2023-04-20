@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+  <!--Quando coloca o form-select-lg aumenta o tamanho, quando é colocado essa classe  multilple,  é mostrado todas as opções, caso a pessoa precise ou queira copiar-->
+  <div class="mb-5">
+  <select class="mt-5 form-select form-select-lg multiple aria-label="multiple select example" aria-label="Default select example">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+<div>
+  <!--O size é para alterar o tamanho e para desativar esse select, é so colocar o disabled no fim-->
+  <select class="form-select" size="3" aria-label="size 3 select example"aria-label="Default select example" disabled>
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div> 
+  
+<div class="mt-5 mb-5 border border-danger">
+  <!--Isso é um checkbox-->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+      Qualquer coisa
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+    <label class="form-check-label" for="flexCheckChecked">
+      Ola
+    </label>
+  </div>
+</div>
+
+<div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+    <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+    <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="Qualquer coisa" >
+    <label class="form-check-label" for="flexSwitchCheckDisabled">Posso colocar oq quiser</label>
+  </div>
+  <!--Usando o checked disabled no fim do input, o switch sera desativado mas com o check azul-->
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+  </div>
+</div>
+
+<div class="mb-5 mt-5 border border-danger">
+  <div class="form-check">
+    <!--Com o radio, é possivel marcar só uma das opções, o check por outro lado permite marcar várias-->
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+    <label class="form-check-label" for="exampleRadios1">
+      Default radio
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+    <label class="form-check-label" for="exampleRadios2">
+      Second default radio
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+    <label class="form-check-label" for="exampleRadios3">
+      Disabled radio
+    </label>
+  </div>
+</div>
+<div class="mt-5 mb-5">
+  <!--Usando essa classe de check-inline, faz com q as listas de check fiquem uma ao lado da outra, mesma coisa com o radio-->
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">1</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+    <label class="form-check-label" for="inlineCheckbox2">2</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+    <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+  </div>
+</div>
+<div class="mb-5 mt-5">
+  <!--Com essas classes reverse, os switch ficam ao lado oposto -->
+  <div class="form-check form-check-reverse">
+    <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+    <label class="form-check-label" for="reverseCheck1">
+      Reverse checkbox
+    </label>
+  </div>
+  <div class="form-check form-check-reverse">
+    <input class="form-check-input" type="checkbox" value="" id="reverseCheck2" disabled>
+    <label class="form-check-label" for="reverseCheck2">
+      Disabled reverse checkbox
+    </label>
+  </div>
+  <div class="form-check form-switch form-check-reverse">
+    <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+    <label class="form-check-label" for="flexSwitchCheckReverse">Reverse switch checkbox input</label>
+  </div>
+</div>
+<div class="mb-5 mt-5">
+  <!--esse botão fica com cor apos ser clicado-->
+  <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+  <!--pode alterar a cor-->
+<label class="btn btn-outline-success" for="btn-check-outlined">Single toggle</label><br>
+
+<input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+<!--Esses são estilos radios, então é um botão ou otro-->
+<input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+<label class="btn btn-outline-success" for="success-outlined">Esse</label>
+
+<input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+<label class="btn btn-outline-danger" for="danger-outlined">Ou esse</label>
+</div>
+<!--Esse é um exemplo do input group, são várias coisas q já pidem ficar pré-definidas, na parte de forms/input groups, contém várias exemplos q podem ser usados -->
+<div class="mb-5 mt-5">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <span class="input-group-text" id="basic-addon2">@example.com</span>
+  </div>
+</div>
+<div class="mb-5 mt-5">
+  <!--Esse é por exeomplo um q contem um botão e um dropdown, tem vários outros exemplos na documentaçãpo, conforme foi dito acima-->
+  <div class="input-group mb-3">
+    <button type="button" class="btn btn-outline-secondary">Action</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Separated link</a></li>
+    </ul>
+    <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="digite algo....bla">
+  </div>
+</div>
+
+<div class="mt-5 mb-5"> 
+  <!--Com esse formulário é possível fazer essa animação, um palavra fica escrita e quando o usuário clica, ela vai para cima, parecido com o placeholder, so q com animação-->
+  <!--No doc na aprte form/floating labels, tem várias opções de formulários ja vistos com essa animação-->
+  <div class="form-floating mb-3">
+    <input type="email" class="form-control border border-danger" id="floatingInput" placeholder="name@example.com">
+    <label style="color: aqua;" for="floatingInput">Vou flutuar</label>
+  </div>
+  <!--Colocando o is-invalid no class do input, ele fica formatado como se tivesse sido errado o preenchimento-->
+  <div class="form-floating">
+    <input type="password" class="form-control is-invalid" id="floatingPassword" placeholder="Password">
+    <label for="floatingPassword">Password</label>
+  </div>
+</div>
+
+<div class="container mb-5">
+  <h1 class="mb-3 text-center">Formulário</h1>
+  <!--Usando o g-até 5, no class q contoem a row, é possível controlar o espaçamento entre os formulários quando eles estão um do lado do outro-->
+  <div class="row g-2">
+    <div class="col-6">
+      <input type="text" class="form-control" placeholder="Nome" aria-label="First name">
+    </div>
+    <div class="col-6 mb-5">
+      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    </div>
+  </div>
+
+</div>
+<div class="mb-5 mt-5">
+  <!--Esse formulário faz uma identificação se foi preenchido ou não, mas ele so ve se foi preenchido,l caso tenha q fazer algo mais especifico para fazer essa verificação, é necessário ver o javascritp,etc...-->
+  <form class="row g-3">
+    <div class="col-md-4">
+      <label for="validationServer01" class="form-label">First name</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationServer02" class="form-label">Last name</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationServerUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+        <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationServer03" class="form-label">City</label>
+      <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+      <div id="validationServer03Feedback" class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer04" class="form-label">State</label>
+      <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+      </select>
+      <div id="validationServer04Feedback" class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer05" class="form-label">Zip</label>
+      <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+      <div id="validationServer05Feedback" class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+        <label class="form-check-label" for="invalidCheck3">
+          Agree to terms and conditions
+        </label>
+        <div id="invalidCheck3Feedback" class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

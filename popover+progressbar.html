@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/outrosestilos.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+  <div class="mt-5 mb-5">
+    <div class="card" style="width: 18rem;">
+      <img src="img/encarar.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="text-center">
+            <a href="#" class="btn-sm btn btn-primary">Go somewhere</a>
+            <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 progress">
+      <!--Essaa é a barra de progesso, para mudar aonde o azul vai estar, vc pode colocar a classe w-e um número q começa a partir de 25, ou 50 ou 75 etc...ai vc coloca o value now o mesmo q esta no w, pq é esse valor q vai ser visto pelo reesponsavel o w é o efeito visual, e tem o valor maximo da barro e o minimo, vc pode mudar o progresso delea usando o style width e colcoar 30% por exemplo, ai da para colocar a quantidade que quiser-->
+      <div style="width: 80%;" class="progress-bar" aria-label="Basic example" sty role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">80%
+      </div>
+    </div>
+    <div class="mt-3">
+      <!--Usando o stye height , da para aumentar a grossura da barra de progresso-->
+      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 50px;">
+        <!--Mas esse progressbar tem q estar separado, diferente do de cima-->
+        <!--Com o bg- e o nome da cor, da para alterar a corm com o striped a barra fica listrada, e com o animated ela fica animada, tem mais exemplos no doc components/progress bar-->
+        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated w-75" >75%</div>
+      </div>
+    </div>
+  </div>
+</div> 
+  
+
+
+
+
+<script>
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+</script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

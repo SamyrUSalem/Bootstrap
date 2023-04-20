@@ -1,0 +1,16 @@
+.filenone{
+    display: none;
+}
+
+.estilizando{
+    padding: 10px 10px;
+    background-color: rgb(10, 131, 131);
+    border-radius: 10px;
+    color: white;
+    transition: .5s;
+}
+
+.estilizando:hover{
+    background-color: rgb(15, 182, 182);
+    color: black;
+}

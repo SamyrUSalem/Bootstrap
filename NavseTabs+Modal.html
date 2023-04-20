@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/outrosestilos.css">
+    <title>Document</title>
+</head>
+<body>
+  <!--Usando essas propriedades de data-bs, faz com q esse butão chame o modalx-->
+  <div class="container mt-5">
+    <div class="mb-5">
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="submit">Modal</button>
+    </div>
+    <div>
+      <!--Quando é um link, tem q só colocar o data-bs-toggle, e colcoar no href o id do modal, junto com o #-->
+      <a class="btn btn-danger text-dark" data-bs-toggle="modal" href="#exampleModal"><b>Link</b></a>
+    </div>
+
+    <div class="mb-5 mt-5">
+      <!--Esse é os navs tabs, é monte de aba. O conteúdo n é obrogatório ter só texto, pode colocar coutras coisas como: Card, formulários,etc...-->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">CAsa Grande</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Perfil né</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contate amigo</button>
+        </li>
+        <!--Quando for colocar uma nova aba, é necessário fazer as trocas dos nomes do id,data-bs-target e aria-controls, O Id e o data-bs, precisam ter o #-->
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="#qualquer-tab" data-bs-toggle="tab" data-bs-target="#qualquer-tab" type="button" role="tab" aria-controls="qualquer-tab" aria-selected="false">Qualquer coisa é</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">Posso colocar qualquer coisa</div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">Esse fade é apra ter esse efeito</div>
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Na hora de passar</div>
+        <!--Aqui é necessário trocar o id e o arial, para conectar com a aba-->
+        <div class="tab-pane fade" id="qualquer-tab" role="tabpanel" aria-labelledby="qualquer-tab" tabindex="0">Qualquer coisa, sabe como é</div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+<!--Existem vários tipos de modals q darem para serem usados, é só ir no components/modal-->
+ <!-- Modal, os modais normalmente ficam embaixo dos códigos -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <!--Colocando o modal-dialog-centered, o modal irá ficar no meio-->
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Esse é o static Modal, toda vez q clicar nesse butão ele aparece, e só pode tirar ele quando clicar em alguma opção
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Esse é o modal, live example, ele é o mais imples se clicar em qualquer lugar ele irá fechar -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!--Usando essa classe modal-dialog-scrollable, o modal irá ficar com scroll caso precise-->
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam esse quaerat reiciendis. Inventore perspiciatis cumque reiciendis quam animi unde odit voluptates maxime suscipit ex enim ullam, fugit at. Id, eius.</p>
+        <p>Aliquam et nihil accusantium accusamus? Pariatur doloremque, voluptatum maxime, in eum odit quaerat a esse ad deleniti provident. Voluptates deserunt vitae perspiciatis enim ullam iusto, eaque dolores fugit praesentium corrupti!</p>
+        <p>Doloribus libero voluptas praesentium quia odit laudantium hic, modi provident? Reiciendis neque, et nulla unde numquam perferendis est provident corrupti soluta tenetur veritatis eveniet fugit animi tempora sint sapiente perspiciatis?</p>
+        <p>Excepturi vitae velit soluta aut cum esse eum veniam aliquid sed, nisi odit modi itaque, reprehenderit aspernatur perspiciatis? Sequi excepturi est labore veniam. Qui voluptatem minima ducimus atque, ipsam distinctio.</p>
+        <p>Temporibus unde explicabo nisi laudantium, placeat velit dolor qui vitae hic vel excepturi ipsum soluta enim sed dolores, saepe iste suscipit quae, mollitia ut quis? At quaerat a corporis commodi?</p>
+        <p>Culpa molestias fugit incidunt nesciunt! Adipisci laboriosam distinctio excepturi obcaecati eligendi perferendis recusandae vitae numquam ad harum rem quos qui sapiente assumenda voluptatum, incidunt similique minus quaerat ullam dolorem minima!</p>
+        <p>Quas obcaecati sed unde reprehenderit repudiandae aperiam, similique deserunt impedit assumenda dolor quisquam animi. Enim laborum, deserunt perspiciatis voluptatibus eveniet hic eum laboriosam aliquam velit dolorem earum optio minus dignissimos?</p>
+        <p>Aliquam rem deserunt sunt tempore, dolorum, enim nihil dolores, natus molestias soluta delectus iure dolore quibusdam hic aliquid vero. Sunt quam assumenda provident possimus inventore velit praesentium asperiores quos fuga.</p>
+        <p>Repellat minus consequuntur error sint maiores atque repellendus ad provident beatae aut dicta quibusdam quo voluptates at inventore recusandae, nisi rerum voluptas totam laudantium? Vitae hic corporis necessitatibus reprehenderit quibusdam?</p>
+        <p>Illo qui quo unde laudantium deleniti molestiae quasi temporibus tempora minus ullam, reiciendis eligendi optio, adipisci, aut maiores. Voluptatem quod enim id? Fugiat voluptas vero, hic molestiae consequuntur inventore fugit.</p>
+        <p>Accusantium suscipit enim expedita, inventore veniam excepturi voluptatibus tenetur vero alias dolores voluptate facilis. Obcaecati delectus vitae architecto commodi neque sequi placeat assumenda omnis id. Officiis eligendi consequuntur optio voluptatum!</p>
+        <p>Nostrum vero consectetur perferendis nemo illo architecto error cupiditate corporis! Ipsum recusandae veritatis, perferendis voluptatem eum voluptatibus quos est? Aperiam modi nisi consequuntur nostrum at doloribus minima qui quidem perferendis!</p>
+        <p>Suscipit excepturi praesentium, quidem quo, soluta nihil quae autem quos ex voluptates perferendis hic incidunt ipsa aperiam eaque beatae. Odit doloribus dolorum quasi corrupti nisi iusto dolore, impedit dolores vel?</p>
+        <p>Unde non ipsum autem, assumenda quaerat quibusdam impedit nihil fugit saepe repellat beatae perferendis! Accusantium, ducimus quae tempora maxime voluptates iure necessitatibus fugiat, ut sunt magni ipsa possimus maiores assumenda?</p>
+        <p>Recusandae optio corrupti sed in est nam magni dignissimos quis amet neque aperiam velit laborum incidunt perferendis dolores harum alias, consequatur reprehenderit vero delectus assumenda iste impedit quod molestiae? Commodi.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  //javascript q falhou...
+  var modal = new bootstrap.Modal(document.getElementById('exampleModal'), {});
+  setTimeout(function (){
+    modal.show();
+  }, 5000);
+</script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

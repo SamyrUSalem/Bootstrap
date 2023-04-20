@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-sm-12 border mt-5 mb-5">
+        <p class="h1">Usando o class h1, da para deixar esse texrto na formatação de h1, sem quer um h1, e tem o class h2,h3.. e por ai vai</p>
+        <i><p class="text-muted fs-4">Essa classe de text-muted, faz com que o texto fique im cinza mais claro, como se fosse um texto secundário e tem outra classe q se chama fs q é para alterar o tamanho da fonte, fs-numero do tamanho é de 1 a 5, mas o 1 é o maior </p></i>
+
+    </div>
+    <div class="border text-center mb-5">
+        <!--Com o float-end , ele vai para o final no caso vai a direita, o float-start ele fica no começo q é a esquerda e com o text-center, vai ficar no meio-->
+        <img style="width: 70%;" class="mt-5 mb-5 col-sm-12" src="img/largetyha.jpg">
+    </div>
+    <div>
+      <!--Usando o table-mais alguma cor, de acordo com o nome q esta na documentação content/table. Pode ser colacada na tag table, ai vai ser na taabela toda, ou diratamente em uma clualr th ou em uma linha interia tr-->
+      <table class="table mb-5 table-danger">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td class="table-dark">@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

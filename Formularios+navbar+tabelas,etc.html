@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--Para mudar a cor desse cabeçalho, é só colocar o bg- e coloacr o nome q esta la na documentação do bootstrap, nesse caso foi o danger q é o vermelho, ou coloque a cor no modo tradicional, o style: background-color: e a cor (CSS), e a cor da fonte pode mudar no navbar-, e o nome nesse caso o dark deixa elas branca e o light deixa preto-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-danger" aria-label="Third navbar example">
+        <!--O container é meio q a forma de deixar o conteúdo em um bloco, o bootstrap já tem classes pré prontas, se eu colocar a class container e um div e por em volta na navbar, ele irá meio q da uma margem nos lados(meio q colocando em uma caixa) se eu colocar dentro da navbar cmomo agora, o fluid significa q ele vai preencher a área toda, mas se tirar ele irá deixar a margem no conteúdo-->
+        <div class="container">
+          <a class="navbar-brand" href="#">Expand at sm</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--Estou utilizando classes já prontas, só pelos nomes já dá para imaginar, o row é em formato de linha , o col é emcoluna, container é para deixar tipo em caixa com aqueles espaços ao lado, colando col-algum número, da par alterar o seu tamanho na tela, quando esta dentro de um container o tamanho total é 12. O border é a as bordas né, e o bg é a cor do fundo como visto antes-->
+      <div class="container">
+        <div class="row">
+            <!--Quando é colocando o lg depois do col, quer dizer q essa configuração de tamanho só vai ser feita em telas largas, na documentação tem as abreviaçãoes de vários tipos de telas, junto com os seus pixels(layouts/breakponts). Da para colocar mais de uma configuração de telas, colocando por exemplo o col-md, col-sm com os seus respectivos tamanhos, toda vez q o aparelho for sm vai ter essa configuração e por ai vai-->
+
+            <!--Com a classe m é possivel colocar a margem, é só colcoar o m  e adireção no caso mt é margin top, na documentação na aprte de utilities e spacing, mostra as direções certas e o espaço pode varia de 1 a 5, o 5 é o maior, o padding é a mesma coisa só q é p inves de m-->
+            <div class="col-md-6 col-sm-7 mt-5 " >
+                <h1>Ola esse é um eercicio</h1>
+                <p>Vamo testar, pq esse é o negócio, a gente tem q ter fé pois lutamos para isso, SOMOS VIKINGS!</p>
+                <!--Isso abaixo é um botão, só troquei o bottom pelo a, para poder colcoar link caso queira, com o btn-lg, eu aumentei o tamnho do botão, se colocasse o btn- sm ele ficaria menor e por ai vai...-->
+                <a href="#" class="btn btn-success btn-lg ">Seja Um Viking</a>
+                <button type="button" class="btn btn-outline-secondary btn-sm p-2" disabled>Pagão</button>
+            </div>
+            <!--A classe img-fluid é tipo o max-width ou o cover, q faz com q a imagem se adapt ao tamanho do bloco tipo colcoar o width em 100%-->
+            <div class="col-md-6 col-sm-5 mt-5">
+                <!--O img-thumbnail faz com que a imagem fique com uma moldura em volta, o rounded faz com que as bordas fiquem arredondadas, caso queira alterar a posição dela, na documentação, cotnent/images mostrar os comandos certos-->
+                <img class="img-fluid rounded mb-5" src="img/vikings.jpg">
+            </div>
+            
+            <div class="mb-5">
+              <div class="row">
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="Apelido" class="form-label">Apelido</label>
+                    <!--Colocando o form-control-lg, o campo do formulário ficara maior, se colocar sm icará pequeno, para ver melhor é so ir nos docs, forms/control-forms-->
+                    <input type="text" class="form-control form-control-lg id="Apelido" placeholder="Me diga o seu Apelido">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <!--Colocando o readonly no final, e colocando um value q no caso é algo q ficara escrito no campo, o usuario so consegue ler e copiar oq esta escrito. Com a classe border border-e u nome de cor q desejar q tem no bootstrap, a cor das bordas do input serão alteradas-->
+                    <input type="email" class=" border border-danger form-control" id="exampleFormControlInput1" value="N consegue digitar e nem apagar, só copiar" placeholder="name@example.com"  readonly>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="criatividade" class="form-label">Fale algo criativo</label>
+                    <!--Com a clase form-control-plaintext, as bordas do input somem, somente quando o usuário clica aparece-->
+                    <input type="text" class="form-control form-control-plaintext" id="criatividade"  placeholder="Fale algo criativo">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="polegar" class="form-label">Polegar preferido</label>
+                    <!--QUando é colocado o disabled no final, n é possivel preencher o campo-->
+                    <input type="text" class="form-control" id="polegar" placeholder="Fale o polegar" disabled>
+                  </div>
+                </div>
+              </div>
+             <div> 
+              <div class="row">
+              <div class="col">
+                <div class="mb-3 mt-3">
+                <!--Esse campo permite q o usuário escolha uma arquivo para enviar, pode ser formatado da mesma maneira q os outros-->
+                <label for="formFile" class="form-label">Envie o seu arquivo</label>
+                <input class="form-control border border-primary" type="file" id="formFile">
+              </div>
+            </div>
+              <div class="col">
+               <div class="mb-3 mt-3">
+                <label for="formFileMultiple" class="form-label">Da para enviar mais de 1 arquivo</label>
+                <!--Colocando esse multiple no final, faz com q seja possível colcoar mais de 1 arquivo-->
+                <input class="form-control" type="file" id="formFileMultiple" multiple>
+              </div>
+              
+              </div>
+            </div>
+            </div>
+            <!--Com esse é possível escolher uma cor-->
+            <div class="text-center">
+             <label for="exampleColorInput" class="form-label">Escolha a cor q quiser</label>
+             <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+            </div>
+            <div class="mt-5 mb-5">
+            <label for="exampleDataList" class="form-label border border-primary">Esse serve para o usuário pesquisar, e la embaico será colcoado um monte de opções, quando ele for digitando a barra irá tentar comppletar oq esta sendo escrito, com oq tem nas opções</label>
+            <input class="form-control border border-danger" list="datalistOptions" id="exampleDataList" placeholder="Pesquise algo">
+            <datalist id="datalistOptions">
+              <option value="San Francisco">
+              <option value="New York">
+              <option value="Seattle">
+              <option value="Los Angeles">
+              <option value="Chicago">
+              <option value="fruta">
+              <option value="abacate"> 
+            </datalist>
+          </div>
+          </div>
+      </div>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
